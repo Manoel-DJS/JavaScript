@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+    <style>
+        
+        body{
+            background-color: purple;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        div{
+            background-color: lightgreen;
+            width: 300px;
+            height: 300px;
+            box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.301);
+            margin: auto;
+            border-radius: 20px;
+            padding: 4px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Brincando com Hora </h1>
+    <div id="res" onload="carregar()">
+        <p>
+            <input type="text" name="txthora" id="txthora">
+            <input type="button" value="Verificar" onclick="clicar()"> 
+        </p>
+    </div>
+
+    <script>
+        // aparentemente preciso inserir as variaveis na função
+        
+        var vhora = window.document.getElementById('txthora')
+        var res = window.document.querySelector('div#res')
+        var hora = Number(vhora.value) 
+        var data = new Date()
+        var relogio = data.getHours()
+        res.innerHTML += hora
+        
+
+        function clicar(){
+        var hora = hora
+            if (hora < 24){
+                window.alert('Certo!')
+                res.innerHTML += hora
+            } else{
+                window.alert('burro!')
+            }
+        }
+
+    </script>
+</body>
+</html>
