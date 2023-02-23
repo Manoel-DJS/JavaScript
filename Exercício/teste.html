@@ -17,6 +17,7 @@
         }
 
         div{
+            text-align: center;
             background-color: lightgreen;
             width: 300px;
             height: 300px;
@@ -39,23 +40,30 @@
     </div>
 
     <script>
+        // Eventos DOM
         // aparentemente preciso inserir as variaveis na função
         // melhorar a declaração de variavel
         // melhorar organização do codigo
         
+
+        
+
+        function clicar(){
         var vhora = window.document.getElementById('txthora')
         var res = window.document.querySelector('div#res')
         var hora = Number(vhora.value) 
         var data = new Date()
         var relogio = data.getHours()
-        res.innerHTML += hora
         
+        res.innerHTML = `<p>Agora são ${relogio} horas.</p>`
 
-        function clicar(){
-        var hora = hora
             if (hora < 24){
                 window.alert('Certo!')
                 res.innerHTML += hora
+                if(relogio == hora){
+                    res.innerHTML += '<p>Você Acertou!</p>'
+                }
+                document.body.style.backgroundColor = '#e2cd9f'
             } else{
                 window.alert('burro!')
             }
