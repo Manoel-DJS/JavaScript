@@ -4,6 +4,8 @@ do  {
     c++
 } while (c <= 5)
 
+// Primeiro executa, depois testa
+
 /** 
     while: Teste Lógico no início
     "Faz o teste, se for true, refaz o bloco(bloco == entre chaves {})"
