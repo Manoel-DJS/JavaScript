@@ -11,8 +11,8 @@ function clicar() {
         for( var c = 0 ; c <= 10 ; c++){
             let item = window.document.createElement('option')
             item.text = `${n} x ${c} = ${n*c}`
+            item.value = `tab${c}`
             tab.appendChild(item)
-
 
         }
 }
