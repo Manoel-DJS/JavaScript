@@ -16,8 +16,12 @@ section{
     padding: 15px;
     width: 500px;
     margin: auto;
-    text-align: center;
+    text-align: justify;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+}
+
+select#seltab{
+    width: 150px;
 }
 
 footer{

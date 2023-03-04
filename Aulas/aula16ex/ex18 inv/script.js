@@ -1,9 +1,41 @@
+let numero = window.document.getElementById('txtnum')
+let res = window.document.querySelector('div#res')
+let lista = window.document.getElementById('seltab')
 var vetor = []
 
+function isNumero(n){
+    if (Number(n) >= 1 && Number(n) <= 100){
+        return true
+    } else{
+        return false
+    }
+}
+
+function inLista(n,l){
+    if(l.indexOf(Number(n)) != -1){
+        return true
+    } else{
+        return false
+    }
+}
+
 function adicionar(){
-    let numero = window.document.getElementById('txtnum')
-    let res = window.document.querySelector('div#res')
-    let tab = window.document.getElementById('seltab')
+    if (isNumero(numero.value) && !inLista(numero.value, vetor)){
+        window.alert('Tudo nos conformes.')
+    } else{
+        window.alert('Valor encontrado ou inválido.')
+    }
+}
+/*
+
+var vetor = []
+let numero = window.document.getElementById('txtnum')
+let res = window.document.querySelector('div#res')
+let tab = window.document.getElementById('seltab')
+function adicionar(){
+
+
+
     
 
     if (numero.value <= 0 || numero.value > 100){
@@ -33,3 +65,5 @@ function finalizar(){
 
     res.innerHTML += `Vetor = ${vetor} e quant ${media}`
 }
+
+*/
