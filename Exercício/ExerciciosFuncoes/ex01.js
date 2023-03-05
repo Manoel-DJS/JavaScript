@@ -1,19 +1,7 @@
+
 /*
 function imprimir(n){
-    let i = ''
-    for(var c = 1; c <= n; c++){
-        i += String(c) 
-    }
-    return c
-
-}
-
-let res = imprimir(3)
-console.log(res)
-*/
-
-function imprimir(n){
-    var i = 0
+    var i = ''
     for(var c = 1; c <= n; c++){
         i = c.toString()
         console.log(i)
@@ -21,5 +9,21 @@ function imprimir(n){
 
 }
 let res = imprimir(3)
+*/
+
+function imprimir(n){
+    let S = ''
+    for(var x = 1; x <= n ; x++){
+        for(var y = 0; y < x; y++){
+            S += x.toString()
+            console.log(x)
+        }
+    }
+
+}
+
+let res = imprimir(3)
+console.log(S)
+
 
 // https://wiki.python.org.br/ExerciciosFuncoes
