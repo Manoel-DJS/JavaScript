@@ -16,14 +16,14 @@ function imprimir(n){
     for(var x = 1; x <= n ; x++){
         S = ''
         for(var y = 0; y < x; y++){
-            S += x.toString()
-            
-        } console.log(S)
+            S += x.toString()  
+        } 
+        console.log(S)
     }
 
 }
 
-let res = imprimir(3)
+let res = imprimir(5)
 
 
 
