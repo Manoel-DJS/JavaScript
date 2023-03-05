@@ -16,14 +16,15 @@ function imprimir(n){
     for(var x = 1; x <= n ; x++){
         for(var y = 0; y < x; y++){
             S += x.toString()
-            console.log(x)
+            console.log(S)
         }
     }
 
 }
 
 let res = imprimir(3)
-console.log(S)
+
+
 
 
 // https://wiki.python.org.br/ExerciciosFuncoes
