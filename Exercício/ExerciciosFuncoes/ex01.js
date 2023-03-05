@@ -21,3 +21,5 @@ function imprimir(n){
 
 }
 let res = imprimir(3)
+
+// https://wiki.python.org.br/ExerciciosFuncoes
