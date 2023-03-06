@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+    <style>
+    body{
+    background-color: blue;
+    font: normal 15pt Arial;
+    }
+
+    header{
+        color: white;
+        text-align: center;
+    }
+
+    section{
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        text-align: center;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Exercício 3 </h1>
+    </header>
+   
+    <section>
+        <div>
+            <p>
+                <label for="tn1">Número (1): </label>
+                <input type="number" name="tn1" id="tn1">
+            </p>
+
+            <p>
+                <label for="tn2">Número (2): </label>
+                <input type="number" name="tn2" id="tn2">
+            </p>
+
+            <p>
+                <label for="tn3">Número (3): </label>
+                <input type="number" name="tn3" id="tn3">
+            </p>
+            <input type="button" value="Somar" onclick="somar(tn1.value, tn2.value, tn3.value)">
+            
+        </div>
+        <div id="res">
+            Esperando valores
+        </div>
+
+        <script>
+            function somar(num1, num2, num3){
+                res.innerHTML = ''
+                res.innerHTML += (`Valor de 1: ${num1} <br>`)
+                res.innerHTML += (`Valor de 2: ${num2} <br>`)
+                res.innerHTML += (`Valor de 3: ${num3} <br>`)
+                var S = 0
+                S = Number(num1)+ Number(num2) + Number(num3)
+              res.innerHTML += (`<p>A soma dos valores é ${S}</p>`)
+            }
+        </script>
+    </section>
+</body>
+</html>
