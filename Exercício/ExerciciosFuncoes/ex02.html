@@ -1,0 +1,79 @@
+<!--
+    (2)
+    Faça um programa para imprimir:
+    1
+    1   2
+    1   2   3
+    .....
+    1   2   3   ...  n
+para um n informado pelo usuário. Use uma função que receba um valor n inteiro imprima até a n-ésima linha.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02</title>
+    <style>
+        body{
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header{
+            text-align: center;
+        }
+        section{
+            background-color: black;
+            color: white;
+            width: 500px;
+            height: 200px;
+            margin: auto;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.39);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1> Exercício 2 </h1>
+    </header>
+
+    <section>
+        <div>
+            <p>
+                <label for="txtnum">Número: </label>
+                <input type="number" name="txtnum" id="txtnum">
+                <input type="button" value="Imprimir" onclick="imprimir(txtnum.value)">
+            </p>
+        </div>
+
+        <div id="res">
+
+        </div>
+    </section>
+
+    <script>
+        function imprimir(n){
+            res.innerha
+        }
+    </script>
+</body>
+
+<script>
+    function imprimir(n){
+        res.innerHTML += (`Valor informado: ${n} <br>`)
+        I = ''
+        for(var c = 1 ; c <= n ; c++){
+            I = ''
+            for(var x = 0; x < c; x++){
+                I += ' ' + c.toString()
+            }
+            res.innerHTML += (`${I} <br>`) 
+        }
+    }
+</script>
+</html>
