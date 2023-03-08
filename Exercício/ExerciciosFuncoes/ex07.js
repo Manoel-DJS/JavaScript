@@ -10,6 +10,9 @@ do{
 function valorPagamento(){
 
 }
+
+/*
+
 c = false
 x = -1
 do{
@@ -20,3 +23,5 @@ do{
     }
     x ++
 } while( c == false )
+
+*/
