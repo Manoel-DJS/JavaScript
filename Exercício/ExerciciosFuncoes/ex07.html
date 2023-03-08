@@ -41,6 +41,7 @@
             <p>
                 <label for="txtdia">Dias de Atraso: </label>
                 <input type="number" name="txtdia" id="txtdia">
+                <input type="button" value="Consultar" onclick="valorPagamento()">
             </p>
         </div>
         <div id="res">
@@ -49,7 +50,24 @@
     </section>
 
     <script>
-        
+        function valorPagamento(){
+            let pre = window.document.getElementById('txtpre')
+            let dia = window.document.getElementById('txtdia')
+            let res = window.document.querySelector('div#res')
+            let multa = Number((pre.value / 100)*3) 
+            let juros = Number((dia.value * 0,001)) 
+            let valorfinal = 0
+            res.innerHTML = '<br>'
+            res.innerHTML += `Valor da multa: ${multa}<br>`
+            res.innerHTML += `Valor da juros: ${juros}<br>`
+            if(dia.value <= 0){
+                res.innerHTML += `<p>O valor da prestação é ${Number(pre.value)}</p>`
+            } else if(dia.value >= 1){
+                valorfinal = (Number(pre.value) + multa) + juros
+                res.innerHTML += `Valor final com os atrasos: ${valorfinal}`
+
+            }
+        }
     </script>
 
 </body>
