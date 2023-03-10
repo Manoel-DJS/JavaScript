@@ -50,13 +50,15 @@
     </section>
 
     <script>
+
+        /*
         function valorPagamento(){
             let pre = window.document.getElementById('txtpre')
             let dia = window.document.getElementById('txtdia')
             let res = window.document.querySelector('div#res')
             var tdia = Number(dia.value)
             let multa = Number((pre.value / 100)*3) 
-            let juros = Number((pre.value / 1000)*tdia) 
+            let juros = Number((pre.value / 1000) * Number(dia.value)) 
             let valorfinal = 0
             res.innerHTML = '<br>'
             res.innerHTML += `Valor da multa: ${multa}<br>`
@@ -69,6 +71,34 @@
 
             }
         }
+        */
+       
+
+        function valorPagamento(){
+            let pre = window.document.getElementById('txtpre')
+            let dia = window.document.getElementById('txtdia')
+            let res = window.document.querySelector('div#res')
+            vprestacao = Number(pre.value)
+            vdia = Number(dia.value)
+
+            let multa = (vprestacao/100) * 3
+            let juros = (vprestacao/1000) * vdia
+            let valorfinal = 0
+            res.innerHTML = '<br>'
+
+            if(dia.value <= 0){
+                res.innerHTML += `<p>O valor da prestação é ${Number(pre.value)}</p>`
+            } else if(dia.value >= 1){
+                valorfinal = (Number(pre.value) + multa) + juros
+                res.innerHTML += `Valor da multa: ${multa}<br>`
+                res.innerHTML += `Valor da juros: ${juros}<br>`
+                res.innerHTML += `Valor final com os atrasos: ${valorfinal}`
+
+            }
+
+        }
+
+
     </script>
 
 </body>
