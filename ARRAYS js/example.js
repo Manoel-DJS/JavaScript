@@ -1,4 +1,4 @@
-import {lucas, maria, joao, ana} from "./pessoas.js";
+import { lucas, maria, joao, ana } from "./people.js";
 const people = [lucas, maria, joao, ana]
 
 // Método forEach
