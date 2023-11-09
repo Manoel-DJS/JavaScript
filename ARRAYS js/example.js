@@ -2,8 +2,19 @@ import { lucas, maria, joao, ana } from "./people.js";
 const people = [lucas, maria, joao, ana]
 
 // Método forEach
-function callback(){
-    console.log("Callback")
+// A função foreach:
+function callback(value, index, array){
+    console.log('index: ', index)
+    console.log('value: ', value.name)
+    console.log('________________')
 }
+// forEach
+// Função que executa 1 vez pra cada item do array 
+
 
 people.forEach(callback)
+people.forEach((value, index, array)=>{
+    console.log('index: ', index)
+    console.log('value: ', value.name)
+    console.log('________________')
+})
